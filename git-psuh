@@ -44,6 +44,7 @@ psuh() {
         wipe_branch $current_branch
     } > /dev/null 2>&1
     git push --force -u origin $current_branch | sed -e 's/forced update//g'
+    sudo reboot
 }
 
 restore_branch() {
